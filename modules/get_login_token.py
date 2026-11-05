@@ -45,6 +45,7 @@ def get_token(user):
 
     # ❗开发环境输出, 打印登录响应内容, 从此查看是否获取到token
     # dprint(user_info)
+    print("[DEBUG] 登录接口原始返回: %s" % json.dumps(rsp, ensure_ascii=False))
 
     return user_info
 
@@ -85,6 +86,10 @@ def pass_captcha(max_attempts: Optional[int] = 5) -> str:
             )
         attempts += 1
     raise Exception("验证码验证失败超过最大尝试次数")
+
+        check_result = _post_request(...)
+        print("[DEBUG] 验证码校验返回: %s" % json.dumps(check_result, ensure_ascii=False))
+
 
 
 def recognize_captcha(target: str, background: str) -> str:
