@@ -3,8 +3,8 @@ name: "打卡"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "50 8 * * *"  # 上班卡-每天8点50分
-    - cron: "10 21 * * *"  # 下班卡-每天18点01分
+        - cron: "15 0 * * *"  # 北京时间 08:15 上班卡
+
 
 jobs:
   build:
